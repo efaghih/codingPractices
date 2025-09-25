@@ -31,7 +31,7 @@
 
 def is_palindrome(s):
 
-    s_cleaned = ''.join(char.lower() for char in s if char.isalnum())
+    s_cleaned = ''.join(char.lower() for char in s if char.isalnum()) # this is something I leanred googling it.
 
     for i in range(len(s_cleaned) // 2):
         s_left = s_cleaned[i]
