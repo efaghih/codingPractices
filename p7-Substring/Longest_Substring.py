@@ -54,6 +54,48 @@ print("abcdebaflr: ", length_of_longest_substring("abcdebaflr"))
 
 
 
+# time complexity: O(n^2) at worst case
+
+
+# the real solution is to use a sliding window with a hash map
+
+def length_of_longest_substring_sliding_window(s: str) -> int:
+    char_map = {}
+    max_length = 0
+    start = 0
+
+    # enumerate is a built-in function that returns a tuple 
+    # containing the index and the value of the current character
+    for i, char in enumerate(s): 
+        if char in char_map :and char_map[char] >= start: # in short, means that the character is already in the map
+            # Move start to the right of the first duplicate element
+            start = char_map[char] + 1
+        char_map[char] = i # update the index of the character
+        max_length = max(max_length, i - start + 1)
+
+    return max_length
+
+# why the second condition? because we want to only consider elements that are 
+# inside the current window (we only care about the longest substring)
+
+print("--------------------------------")
+print("Sliding Window algorithm: ")
+print("abcabcbb: ", length_of_longest_substring_sliding_window("abcabcbb"))
+print("bbbbb: ", length_of_longest_substring_sliding_window("bbbbb"))
+print("pwwkew: ", length_of_longest_substring_sliding_window("pwwkew"))
+print(" : ", length_of_longest_substring_sliding_window(""))
+print("dvdf: ", length_of_longest_substring_sliding_window("dvdf"))
+print("abcdebaflr: ", length_of_longest_substring_sliding_window("abcdebaflr"))
+
+
+
 # time complexity: O(n)
+
+
+
+
+
+
+
 
     
