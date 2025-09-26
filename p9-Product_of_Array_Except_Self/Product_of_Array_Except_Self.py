@@ -46,7 +46,7 @@ print(product_of_array_except_self_no_division([1, 2, 3, 4, 5]))
 
 
 # Follow-up: what if you can't use division?
-# Efficient solution:
+# Efficient solution: Two-Pass Product Algorithm
 
 def product_of_array_except_self_efficient(nums):
     n = len(nums)
@@ -66,3 +66,8 @@ def product_of_array_except_self_efficient(nums):
     return result
 
 print(product_of_array_except_self_efficient([1, 2, 3, 4, 5]))
+
+
+# time complexity: O(n)
+# space complexity: O(1)
+
