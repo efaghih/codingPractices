@@ -39,7 +39,6 @@ def is_palindrome(s):
 
 
         print(s_left, s_right)
-        print(f"this is i = {i}")
 
         if (s_left != s_right):
              return False
