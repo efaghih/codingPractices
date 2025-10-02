@@ -68,64 +68,79 @@ def max_depth2(root: TreeNode) -> int:
     return depth
 
 
-# test the function
+
+
+
+# test the function (uncomment them)
 
    
-# Test 1: Skewed right tree
-root = TreeNode(0)
-node = root
-for i in range(1, 10):
-    node.left = TreeNode(i*2)
-    node = node.left
+# # Test 1: Skewed right tree
+# root = TreeNode(0)
+# node = root
+# for i in range(1, 10):
+#     node.left = TreeNode(i*2)
+#     node = node.left
 
 
 
 
-#solution 1:
-print("solution 1 :: Test 1")
-print(max_depth(root))
+# #solution 1:
+# print("solution 1 :: Test 1")
+# print(max_depth(root))
 
-#solution 2:
-print("solution 1 :: Test 1")
-print(max_depth2(root))
-
-
+# #solution 2:
+# print("solution 1 :: Test 1")
+# print(max_depth2(root))
 
 
-# Test 2: Skewed right tree
+
+
+# # Test 2: Skewed right tree
+# print("\n___________________________________________")
+# root = TreeNode(0)
+# node = root
+# for i in range(1, 10):
+#     node.right = TreeNode(i*2)
+#     node = node.right
+
+
+
+# #solution 1:
+# print("solution 1 :: Test 2")
+# print(max_depth(root))
+
+# #solution 2:
+# print("solution 1 :: Test 2")
+# print(max_depth2(root))
+
+
+
+# # Test 3: 
+# print("\n___________________________________________")
+# root = TreeNode(0)
+# node = root
+# for i in range(1, 5):
+#     node.right = TreeNode(i*2)
+#     if i % 2 == 1:
+#         node.left = TreeNode(i*2+1)
+#     node = node.right
+
+# #solution 1:
+# print("solution 1 :: Test 3")
+# print(max_depth(root))
+
+# #solution 2:
+# print("solution 1 :: Test 3")
+# print(max_depth2(root))
+
+
+
 print("\n___________________________________________")
-root = TreeNode(0)
-node = root
-for i in range(1, 10):
-    node.right = TreeNode(i*2)
-    node = node.right
+t1 = TreeNode(3)
+t1.left = TreeNode(9)
+t1.right = TreeNode(20)
 
-
-
-#solution 1:
-print("solution 1 :: Test 2")
-print(max_depth(root))
-
-#solution 2:
-print("solution 1 :: Test 2")
-print(max_depth2(root))
-
-
-
-# Test 3: 
-print("\n___________________________________________")
-root = TreeNode(0)
-node = root
-for i in range(1, 5):
-    node.right = TreeNode(i*2)
-    if i % 2 == 1:
-        node.left = TreeNode(i*2+1)
-    node = node.right
-
-#solution 1:
-print("solution 1 :: Test 3")
-print(max_depth(root))
-
-#solution 2:
-print("solution 1 :: Test 3")
-print(max_depth2(root))
+# Add these lines:
+print("Test 4:")
+print("Solution 1:", max_depth(t1))
+print("Solution 2:", max_depth2(t1))
